@@ -6,14 +6,14 @@
 /*   By: gchernys <gchernys@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 06:02:18 by gchernys          #+#    #+#             */
-/*   Updated: 2022/05/25 22:10:59 by gchernys         ###   ########.fr       */
+/*   Updated: 2022/10/13 01:32:54 by gchernys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char *s1, char *set)
 {
 	size_t		size_s;
 	char		*newstring;

@@ -6,7 +6,7 @@
 /*   By: gchernys <gchernys@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:31:56 by gchernys          #+#    #+#             */
-/*   Updated: 2022/07/14 22:47:49 by gchernys         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:39:46 by gchernys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void		ft_putnbr_fd(int n, int fd);
 
 void		ft_putstr_fd(char *s, int fd);
 
-char		**ft_split(char const *s, char c);
+char		**ft_split(char *s, char c);
 
 char		*ft_strchr(const char *s, int c);
 
@@ -119,7 +119,7 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 char		*ft_strrchr(const char *str, int c);
 
-char		*ft_strtrim(char const *s1, char const *set);
+char		*ft_strtrim(char *s1, char *set);
 
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 

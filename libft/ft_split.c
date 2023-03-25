@@ -6,7 +6,7 @@
 /*   By: gchernys <gchernys@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 07:27:14 by gchernys          #+#    #+#             */
-/*   Updated: 2022/04/11 10:03:37 by gchernys         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:16:35 by gchernys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static int	write_split(char **split, const char *str, char charset)
 	return (0);
 }
 
-char	**ft_split(const char *str, char c)
+char	**ft_split(char *str, char c)
 {
 	char	**res;
 	int		words;

@@ -1,26 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_check.c                                      :+:      :+:    :+:   */
+/*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gchernys <gchernys@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 22:40:58 by gchernys          #+#    #+#             */
-/*   Updated: 2022/07/14 22:49:56 by gchernys         ###   ########.fr       */
+/*   Updated: 2022/10/22 06:03:09 by gchernys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-static int	not_digit(char *str)
+int	check_rep_num(t_swplst **a_stk)
 {
-	while (*str && ft_isspace(*str))
-		str++;
-	while (str)
+	t_swplst	*num;
+	t_swplst	*run;
+
+	num = *a_stk;
+	while (num != NULL)
 	{
-		if (ft_isdigit(str) != 1)
+		run = num->next;
+		while (run != NULL)
+		{
+			if (num->data == run->data)
+				return (1);
+			run = run->next;
+		}
+		num = num->next;
+	}
+	return (0);
+}
+
+int	pos_error(int index, int *array, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (array[i] == index)
 			return (1);
-		str++;
+		i++;
 	}
 	return (0);
 }
